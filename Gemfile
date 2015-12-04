@@ -35,7 +35,7 @@ gem 'memcachier'
 # New Relic
 gem 'newrelic_rpm', '>=3.6.8'
 # Fast production server
-gem 'puma'
+gem 'puma', '~> 2.15'
 
 group :production do
   gem 'rails_12factor'
