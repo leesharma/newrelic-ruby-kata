@@ -25,6 +25,8 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
+# Generate ER diagrams
+gem 'rails-erd'
 # Use Nokogiri for processing XML and HTML
 gem 'nokogiri'
 # Use HTTParty for network connections
