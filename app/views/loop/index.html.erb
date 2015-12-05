@@ -1,15 +1,21 @@
 <h1>The Loop</h1>
 <div class="jumbotron">
   <p>Kata: 	N + 1 or some other unintended looping mishap can really hurt
-	your site by stealing away cycles and speed.
-    We are not exactly dealing with n+1 here but what is happening is not really any better.
+  your site by stealing away cycles and speed.
+  We are not exactly dealing with n+1 here but what is happening is not really any better.
 </div>
 
 <div>
   Do sites provide /favicon.ico ?
   <ul>
-  <% @sites.each do |site| -%>
-    <li><%= site.url %> <% if site.icon.present? %><i class="glyphicon glyphicon-ok"></i><% end %></li>
-  <% end -%>
+
+    <% cache ['top_sites_with_icon', WebSite.latest] do %>
+      <% @sites.each do |site| -%>
+        <% cache site do %>
+          <li><%= site.url %> <% if site.icon.present? %><%= glyphicon(:ok) %><% end %></li>
+        <% end %>
+      <% end -%>
+    <% end %>
+
   </ul>
 </div>

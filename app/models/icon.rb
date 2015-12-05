@@ -1,3 +1,3 @@
 class Icon < ActiveRecord::Base
-  belongs_to :web_site
+  belongs_to :web_site, touch: true
 end
