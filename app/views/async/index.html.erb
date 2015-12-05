@@ -8,11 +8,3 @@
 
 <p><%= image_tag('winning-lottery-ticket.jpg', :size => "150x350") %></p>
 <p>Thanks for visiting our page - we'll send your winning lottery numbers by email.</p>
-
-<%
-STDOUT.flush
-
-# After the page is rendered, send an email to remind the user of how awesome we are.
-send_email_to_user
-
-%>

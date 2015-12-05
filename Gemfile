@@ -38,6 +38,8 @@ gem 'memcachier'
 gem 'newrelic_rpm', '>=3.6.8'
 # Fast production server
 gem 'puma', '~> 2.15'
+# Key value store for job processing
+gem 'sidekiq'
 
 group :production do
   gem 'rails_12factor'
